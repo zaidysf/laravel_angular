@@ -1,0 +1,56 @@
+<!-- <table mat-table [dataSource]="this.students$" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element"><button (click)="showUpdateForm(student)" mat-raised-button color="accent">Edit</button></td>
+    <td mat-cell *matCellDef="let element"><button (click)="deleteStudent(student.id)" mat-raised-button color="warn">Delete</button></td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->
+<pre>{{ students$ | async | json}}</pre>
+<!-- <table mat-table class="mat-elevation-z8">
+  <thead>
+    <tr>
+      <th mat-header-cell scope="col">Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students$ | async">
+      <td mat-cell>{{ student.name }}</td>
+      <td mat-cell>
+        <button (click)="showUpdateForm(student)" mat-raised-button>Update</button>
+        <button (click)="deleteStudent(student.id)" mat-raised-button>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="isUpdateActivated" style="margin-top: 50px; margin-left: 50px;">
+  <h4>Update Student</h4>
+  <form (ngSubmit)="updateStudent(updateForm)" #updateForm="ngForm">
+    <div class="form-group">
+      <label for="name">Student Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        class="form-control"
+        required
+        [(ngModel)]="studentToBeUpdated.name"
+        style="width: 400px"/>
+    </div>
+    <button [disabled]="updateForm.invalid" class="btn btn-primary" type="submit">Update</button>
+  </form>
+</div> -->
